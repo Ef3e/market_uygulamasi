@@ -352,9 +352,7 @@ while True:
         belirgec = True
         while belirgec:
             try:#devamlı olarak sayı mı giriyor yoksa yazımı kontrolü
-                islem = int(input("hangi islemi yapmak istersiniz = "))
-                while islem > 3:
-                    islem = int(input("hangi islemi yapmak istersiniz = "))
+                islem = int(input("hangi islemi yapmak istersiniz = ")
                 belirgec = False
             except:
                 belirgec = True
