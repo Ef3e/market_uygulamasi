@@ -300,6 +300,7 @@ yonetici_ahmet = yonetici("ahmet","kidemli")
 musterimiz = musteri("mehmet",200,15)
 musterimiz2 = musteri("ali",800,20)
 musterimiz3 = musteri("veli",1300,10)
+musteri9 = musteri("efe",2300,25)
 def ekran():
     global aktif_musteri
     global yoneticimiz
@@ -352,10 +353,12 @@ while True:
         belirgec = True
         while belirgec:
             try:#devamlı olarak sayı mı giriyor yoksa yazımı kontrolü
-                islem = int(input("hangi islemi yapmak istersiniz = ")
+                islem = int(input("hangi islemi yapmak istersiniz = "))
                 belirgec = False
             except:
                 belirgec = True
+        if islem == 9:
+            ekranimiz = ekran()
         if islem == 1:
             print("9 a basarak ilk ekrana donebilirsin")
             aktif_musteri.urun_al()
@@ -365,8 +368,6 @@ while True:
         if islem == 3:
             print("9 a basarak ilk ekrana donebilirsin")
             aktif_musteri.urun_degisim()
-        if islem == 9:
-            ekranimiz = ekran()
     while ekranimiz == "yonetici":
         islemler_liste = ["musteri islemleri","market islemleri\n\ncikmak icin 9 a basin"]
         sayi = 1
